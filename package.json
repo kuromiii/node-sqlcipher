@@ -41,18 +41,18 @@
     "url": "git://github.com/journeyapps/node-sqlcipher.git"
   },
   "dependencies": {
-    "@mapbox/node-pre-gyp": "^1.0.0",
-    "node-addon-api": "^3.0.0"
+    "@mapbox/node-pre-gyp": "^1.0.10",
+    "node-addon-api": "^5.0.0"
   },
   "devDependencies": {
-    "aws-sdk": "^2.641.0",
-    "electron": "^11.2.3",
-    "electron-mocha": "^10.0.0",
-    "electron-rebuild": "^1.11.0",
-    "eslint": "3.5.0",
-    "mocha": "^5.2.0",
-    "node-abi": "^2.19.3",
-    "node-gyp": "^6.1.0"
+    "aws-sdk": "^2.1248.0",
+    "electron": "^21.2.2",
+    "electron-mocha": "^11.0.2",
+    "@electron/rebuild": "^3.2.10",
+    "eslint": "8.26.0",
+    "mocha": "^10.1.0",
+    "node-abi": "^3.28.0",
+    "node-gyp": "^9.3.0"
   },
   "scripts": {
     "install": "node-pre-gyp install --fallback-to-build",
@@ -70,8 +70,10 @@
   "main": "./lib/sqlite3",
   "types": "./lib/sqlite3.d.ts",
   "files": [
-    "lib/**/*.js",
-    "lib/**/*.ts",
-    "sqlite3.js"
+    "binding.gyp",
+    "deps/",
+    "lib/*.js",
+    "lib/*.d.ts",
+    "src/"
   ]
 }
