@@ -2,7 +2,7 @@
   "name": "@journeyapps/sqlcipher",
   "description": "Asynchronous, non-blocking SQLCipher bindings",
   "version": "5.3.1",
-  "homepage": "http://github.com/journeyapps/node-sqlcipher",
+  "homepage": "https://github.com/kuromiii/node-sqlcipher",
   "author": {
     "name": "JourneyApps",
     "url": "https://journeyapps.com/"
@@ -10,8 +10,8 @@
   "binary": {
     "module_name": "node_sqlite3",
     "module_path": "./lib/binding/napi-v{napi_build_version}-{platform}-{arch}",
-    "host": "https://journeyapps-node-binary.s3.amazonaws.com",
-    "remote_path": "./{name}/v{version}/{toolset}/",
+    "host": "https://github.com/kuromiii/node-sqlcipher/releases/download/",
+    "remote_path": "v{version}",
     "package_name": "napi-v{napi_build_version}-{platform}-{arch}.tar.gz",
     "napi_versions": [
       3,
@@ -38,7 +38,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/journeyapps/node-sqlcipher.git"
+    "url": "git://github.com/kuromiii/node-sqlcipher.git"
   },
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.10",
