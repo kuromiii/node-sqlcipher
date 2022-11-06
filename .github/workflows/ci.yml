@@ -46,6 +46,10 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           architecture: ${{ matrix.host }}
+          lfs: true
+      
+      - name: Checkout LFS objects
+        run: git lfs checkout
 
       - name: Add yarn (self-hosted)
         if: matrix.os == 'macos-m1'
