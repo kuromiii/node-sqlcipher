@@ -49,44 +49,22 @@ db.close();
 
 # SQLCipher
 
-A copy of the source for SQLCipher 4.4.2 is bundled, which is based on SQLite 3.33.0.
+A copy of the source for SQLCipher 4.5.2 is bundled, which is based on SQLite 3.39.2.
 
-## Building from source.
+## Building from source
 
 Building from source when installing the package is only supported up to version 5.2.0.
 
 The two pre-built versions (N-API 3 and N-API 6) cover all electron and node versions, so building from source should
 not be required.
 
-## Usage with electron-forge / electron-rebuild
-
-[electron-forge](https://www.electronforge.io/) uses [electron-rebuild](https://github.com/electron/electron-rebuild) and attempts to rebuild this library from source by default, in a way
-that is _not_ compatible with the way `node-pre-gyp` is used here.
-
-The workaround is to disable the rebuilding:
-1. If using Electron 11+, use a node version that supports N-API 6+ (v10.20.0+ / v12.17.0+ / v14.0.0).
-2. After `npm install` / `yarn install`, make sure that the folder `node_modules/@journeyapps/sqlcipher/lib/binding/napi-v6-linux-x64` exists.
-   If not, check the previous step again, remove the `node_modules` folder, and try again.
-3. Disable rebuilding of this library using the `onlyModules` option of `electron-rebuild` in your `package.json`:
-
-        "config": {
-            "forge": {
-                "electronRebuildConfig": {
-                    "onlyModules": []  // Specify other native modules here if required
-                }
-            }
-        }
-
-Note: [electron-builder](https://www.electron.build/) does not appear to have this issue, and should work directly.
-Similarly, using electron directly should just work, but do check that a compatible node version is used (see above). 
-
 ## OpenSSL
 
 SQLCipher depends on OpenSSL.
 
-For Windows, we bundle OpenSSL 1.1.1i. Binaries are generated using [vckpg](https://github.com/microsoft/vcpkg) (e.g., `.\vcpkg\vcpkg install openssl:x64-windows-static`).
+For Windows, we bundle OpenSSL 3.0.7. Binaries are generated using [vckpg](https://github.com/microsoft/vcpkg) (e.g., `.\vcpkg\vcpkg install openssl:x64-windows-static`).
 
-On Mac we bundle OpenSSL 1.1.1l.
+On Mac we bundle OpenSSL 1.1.1s.
 
 On Linux we dynamically link against the system OpenSSL.
 

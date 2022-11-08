@@ -1,5 +1,14 @@
 # Changelog
 
+## 5.3.2
+
+- Updated to SQLCipher 4.5.2 / SQLite 3.39.2
+- Updated rest of code from upstream node-sqlite3 repo
+- MacOS: Updated to OpenSSL 1.1.1s
+- Windows: Updated to OpenSSL 3.0.7
+- Switch CI to GitHub Actions
+- Updated all npm dependencies
+
 ## 5.3.1
 
 - Linux: Downgrade glibc requirement to 2.24, supporting Ubuntu 16.10+ and Debian 9 (Stretch)+ again.

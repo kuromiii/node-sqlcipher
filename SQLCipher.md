@@ -70,5 +70,3 @@ The OpenSSL files are specifically required for Electron, which doesn't bundle O
 `deps/sqlite3.gyp` has been modified from the original node-sqlite3 one to:
  * Use the bundled OpenSSL on Windows and MacOS.
  * Add additional define statements required by SQLCipher.
-
-

@@ -1,7 +1,7 @@
 {
-  "name": "@journeyapps/sqlcipher",
+  "name": "@kuromiii/sqlcipher",
   "description": "Asynchronous, non-blocking SQLCipher bindings",
-  "version": "5.3.1",
+  "version": "5.3.2",
   "homepage": "https://github.com/kuromiii/node-sqlcipher",
   "author": {
     "name": "JourneyApps",
