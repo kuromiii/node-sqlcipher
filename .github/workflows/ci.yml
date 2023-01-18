@@ -42,11 +42,12 @@ jobs:
     name: ${{ matrix.os }} (node=${{ matrix.node }}, host=${{ matrix.host }}, target=${{ matrix.target }})
     steps:
       - uses: actions/checkout@v3
+        with:
+          lfs: true
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
           architecture: ${{ matrix.host }}
-          lfs: true
       
       - name: Pull LFS objects
         run: git lfs pull
