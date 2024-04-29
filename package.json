@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.10",
-    "node-addon-api": "^7.0.0"
+    "node-addon-api": "^8.0.0"
   },
   "devDependencies": {
     "aws-sdk": "^2.1248.0",
