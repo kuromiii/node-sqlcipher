@@ -27,18 +27,13 @@ jobs:
         target:
           - x64
         node:
-          - 14
-          - 16
           - 18
+          - 20
         include:
-          - os: windows-latest
-            node: 16
-            host: x86
-            target: x86
-#          - os: macos-m1
-#            node: 16
-#            host: arm64
-#            target: arm64
+          - os: macos-m1
+            node: 20
+            host: arm64
+            target: arm64
     name: ${{ matrix.os }} (node=${{ matrix.node }}, host=${{ matrix.host }}, target=${{ matrix.target }})
     steps:
       - uses: actions/checkout@v3
