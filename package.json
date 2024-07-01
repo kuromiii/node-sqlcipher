@@ -49,7 +49,7 @@
     "electron": "^22.0.0",
     "electron-mocha": "^12.0.0",
     "@electron/rebuild": "^3.2.10",
-    "eslint": "9.2.0",
+    "eslint": "9.6.0",
     "mocha": "^10.1.0",
     "node-abi": "^3.28.0",
     "node-gyp": "^10.1.0"
